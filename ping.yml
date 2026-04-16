@@ -1,0 +1,7 @@
+---
+- name: Test Linux server
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Ping test
+      ping:
