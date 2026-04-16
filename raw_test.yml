@@ -1,0 +1,8 @@
+---
+- name: Test raw connection
+  hosts: linux44
+  gather_facts: no
+
+  tasks:
+    - name: Test raw command
+      raw: whoami
