@@ -2,6 +2,8 @@
 - name: Test Linux server
   hosts: linux44
   gather_facts: no
+  become: false
+
   tasks:
     - name: Ping test
       ping:
