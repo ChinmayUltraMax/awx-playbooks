@@ -1,6 +1,6 @@
 ---
 - name: Test Linux server
-  hosts: all
+  hosts: linux44
   gather_facts: no
   tasks:
     - name: Ping test
