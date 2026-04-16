@@ -1,0 +1,17 @@
+---
+- name: Check pending updates
+  hosts: linux44
+  become: yes
+  tasks:
+
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: List upgradable packages
+      shell: apt list --upgradable
+      register: updates
+
+    - name: Show available updates
+      debug:
+        var: updates.stdout_lines
